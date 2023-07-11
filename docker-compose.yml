@@ -1,0 +1,16 @@
+version: "3.7"
+
+services:
+  entrypoint:
+    container_name: test-ts
+    working_dir: /usr/src/app/main
+    build:
+      context: .
+      dockerfile: ./package/Dockerfile
+      args:
+        SERVICE_NAME: entrypoint
+    volumes:
+    - ./lib:/usr/src/app/lib
+    - ./package:/usr/src/app/package
+    - ./entrypoint:/usr/src/app/main
+    command: ["npm", "start"]

@@ -1,0 +1,20 @@
+{
+  "include": [
+    "../package/**/*",
+    "../lib/**/*"
+  ],
+  "compilerOptions": {
+    "strict": true,
+    "checkJs": true,
+    "composite": true,
+    "outDir": "./dist",
+    "target": "ES2022",
+    "declaration": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "module": "ES6",
+    "rootDir": "..",
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  }
+}
