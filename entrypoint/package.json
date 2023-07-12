@@ -7,7 +7,7 @@
   "scripts": {
     "start": "npm run development",
     "development": "npx tsc-watch --noClear --onCompilationComplete 'npm run start:app'",
-    "compile": "tsc",
+    "build": "tsc",
     "start:app": "node --experimental-specifier-resolution=node ."
   },
   "devDependencies": {

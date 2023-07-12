@@ -2,13 +2,13 @@ FROM node:18-alpine
 
 ARG SERVICE_NAME
 
-WORKDIR /usr/src/app/package
-COPY ./package .
+WORKDIR /usr/src/app/lib
+COPY ./lib .
 RUN npm install
 RUN npm run build
 
-WORKDIR /usr/src/app/lib
-COPY ./lib .
+WORKDIR /usr/src/app/package
+COPY ./package .
 RUN npm install
 RUN npm run build
 

@@ -13,4 +13,14 @@ services:
     - ./lib:/usr/src/app/lib
     - ./package:/usr/src/app/package
     - ./entrypoint:/usr/src/app/main
+    - ./services:/usr/src/app/services
+    - ./rules-api:/usr/src/app/main
+    - node_modules_lib:/usr/src/app/lib/node_modules
+    - node_modules_package:/usr/src/app/package/node_modules
+    - node_modules_entrypoint:/usr/src/app/main/node_modules
     command: ["npm", "start"]
+
+volumes:
+  node_modules_package:
+  node_modules_lib:
+  node_modules_entrypoint:
